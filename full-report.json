@@ -1,0 +1,352 @@
+[
+  {
+    "testId": "aa3ad05f8c0e05077efb-3419b144a24b8d84fe85",
+    "title": "Homepage should be accessible",
+    "status": "failed",
+    "axe": [
+      {
+        "id": "target-size",
+        "successCriteriaId": [
+          "wcag258"
+        ],
+        "description": "Ensure touch targets have sufficient size and space",
+        "help": "All touch targets must be 24px large, or leave sufficient space",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/target-size?application=playwright",
+        "impact": "serious",
+        "nodes": [
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (117.3px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 15.2px instead of at least 24px.",
+            "html": "<a href=\"#main-nav\">Skip to navigation</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (132.9px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 15.2px instead of at least 24px.",
+            "html": "<a href=\"#main-content\">Skip to main content</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (83.1px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"/\">Return home</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (131.3px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"/now\">What I'm doing now</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (59.5px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 14.2px instead of at least 24px.",
+            "html": "<a href=\"/about\">#whoami</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (72.5px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12.6px instead of at least 24px.",
+            "html": "<a href=\"/blog\">My writing</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (79.1px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12.6px instead of at least 24px.",
+            "html": "<a href=\"/contact\">Get in touch</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (202.6px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"https://github.com/schalkneethling\">Collaborate with me on GitHub</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (175px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"https://www.youtube.com/channel/UCaIC2hpfo9av8-R7g9qE2sw\">Learn with me on YouTube</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (238.4px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"https://hachyderm.io/@schalkneethling\">Let's chat on Mastodon (Hachyderm)</a>",
+            "impact": "serious"
+          }
+        ],
+        "totalNodes": 12
+      }
+    ]
+  },
+  {
+    "testId": "aa3ad05f8c0e05077efb-c47f2756d42d5f24f4ac",
+    "title": "About should be accessible",
+    "status": "failed",
+    "axe": [
+      {
+        "id": "target-size",
+        "successCriteriaId": [
+          "wcag258"
+        ],
+        "description": "Ensure touch targets have sufficient size and space",
+        "help": "All touch targets must be 24px large, or leave sufficient space",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/target-size?application=playwright",
+        "impact": "serious",
+        "nodes": [
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (117.3px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 15.2px instead of at least 24px.",
+            "html": "<a href=\"#main-nav\">Skip to navigation</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (132.9px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 15.2px instead of at least 24px.",
+            "html": "<a href=\"#main-content\">Skip to main content</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (83.1px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"/\">Return home</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (131.3px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"/now\">What I'm doing now</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (59.5px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 14.2px instead of at least 24px.",
+            "html": "<a href=\"/about\">#whoami</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (72.5px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12.6px instead of at least 24px.",
+            "html": "<a href=\"/blog\">My writing</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (79.1px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12.6px instead of at least 24px.",
+            "html": "<a href=\"/contact\">Get in touch</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (202.6px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"https://github.com/schalkneethling\">Collaborate with me on GitHub</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (175px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"https://www.youtube.com/channel/UCaIC2hpfo9av8-R7g9qE2sw\">Learn with me on YouTube</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (238.4px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"https://hachyderm.io/@schalkneethling\">Let's chat on Mastodon (Hachyderm)</a>",
+            "impact": "serious"
+          }
+        ],
+        "totalNodes": 12
+      }
+    ]
+  },
+  {
+    "testId": "aa3ad05f8c0e05077efb-29895d8b5639e0fd891e",
+    "title": "Now should be accessible",
+    "status": "failed",
+    "axe": [
+      {
+        "id": "target-size",
+        "successCriteriaId": [
+          "wcag258"
+        ],
+        "description": "Ensure touch targets have sufficient size and space",
+        "help": "All touch targets must be 24px large, or leave sufficient space",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/target-size?application=playwright",
+        "impact": "serious",
+        "nodes": [
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (117.3px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 15.2px instead of at least 24px.",
+            "html": "<a href=\"#main-nav\">Skip to navigation</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (132.9px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 15.2px instead of at least 24px.",
+            "html": "<a href=\"#main-content\">Skip to main content</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (83.1px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"/\">Return home</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (131.3px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"/now\">What I'm doing now</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (59.5px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 14.2px instead of at least 24px.",
+            "html": "<a href=\"/about\">#whoami</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (72.5px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12.6px instead of at least 24px.",
+            "html": "<a href=\"/blog\">My writing</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (79.1px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12.6px instead of at least 24px.",
+            "html": "<a href=\"/contact\">Get in touch</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (110.3px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"https://github.com/webcomponents-cg/docs-and-guides\">Web components</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (154.7px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"https://www.duolingo.com/course/de/de/Learn-German\">German using Duolingo</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (202.6px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"https://github.com/schalkneethling\">Collaborate with me on GitHub</a>",
+            "impact": "serious"
+          }
+        ],
+        "totalNodes": 14
+      }
+    ]
+  },
+  {
+    "testId": "aa3ad05f8c0e05077efb-36ebc6cef76cda9c56bb",
+    "title": "Contact should be accessible",
+    "status": "failed",
+    "axe": [
+      {
+        "id": "target-size",
+        "successCriteriaId": [
+          "wcag258"
+        ],
+        "description": "Ensure touch targets have sufficient size and space",
+        "help": "All touch targets must be 24px large, or leave sufficient space",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/target-size?application=playwright",
+        "impact": "serious",
+        "nodes": [
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (117.3px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 15.2px instead of at least 24px.",
+            "html": "<a href=\"#main-nav\">Skip to navigation</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (132.9px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 15.2px instead of at least 24px.",
+            "html": "<a href=\"#main-content\">Skip to main content</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (83.1px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"/\">Return home</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (131.3px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"/now\">What I'm doing now</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (59.5px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 14.2px instead of at least 24px.",
+            "html": "<a href=\"/about\">#whoami</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (72.5px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12.6px instead of at least 24px.",
+            "html": "<a href=\"/blog\">My writing</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (79.1px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12.6px instead of at least 24px.",
+            "html": "<a href=\"/contact\">Get in touch</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (202.6px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"https://github.com/schalkneethling\">Collaborate with me on GitHub</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (175px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"https://www.youtube.com/channel/UCaIC2hpfo9av8-R7g9qE2sw\">Learn with me on YouTube</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (238.4px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"https://hachyderm.io/@schalkneethling\">Let's chat on Mastodon (Hachyderm)</a>",
+            "impact": "serious"
+          }
+        ],
+        "totalNodes": 12
+      }
+    ]
+  },
+  {
+    "testId": "aa3ad05f8c0e05077efb-51f60b5cc80e0a1e10b6",
+    "title": "Blog should be accessible",
+    "status": "failed",
+    "axe": [
+      {
+        "id": "target-size",
+        "successCriteriaId": [
+          "wcag258"
+        ],
+        "description": "Ensure touch targets have sufficient size and space",
+        "help": "All touch targets must be 24px large, or leave sufficient space",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/target-size?application=playwright",
+        "impact": "serious",
+        "nodes": [
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (117.3px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 15.2px instead of at least 24px.",
+            "html": "<a href=\"#main-nav\">Skip to navigation</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (132.9px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 15.2px instead of at least 24px.",
+            "html": "<a href=\"#main-content\">Skip to main content</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (83.1px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"/\">Return home</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (131.3px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"/now\">What I'm doing now</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (59.5px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 14.2px instead of at least 24px.",
+            "html": "<a href=\"/about\">#whoami</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (72.5px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12.6px instead of at least 24px.",
+            "html": "<a href=\"/blog\">My writing</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (79.1px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 12.6px instead of at least 24px.",
+            "html": "<a href=\"/contact\">Get in touch</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (79.1px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 15px instead of at least 24px.",
+            "html": "<a href=\"/tags/accessibility\">accessibility</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (64px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 15px instead of at least 24px.",
+            "html": "<a href=\"/tags/ramblings\">ramblings</a>",
+            "impact": "serious"
+          },
+          {
+            "summary": "Fix any of the following:\n  Target has insufficient size (19.6px by 18px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 18px instead of at least 24px.",
+            "html": "<a href=\"/tags/css\">css</a>",
+            "impact": "serious"
+          }
+        ],
+        "totalNodes": 28
+      }
+    ]
+  }
+]

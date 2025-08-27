@@ -1,0 +1,33 @@
+{
+  "name": "axe-aggregate-reporter",
+  "version": "1.0.0",
+  "description": "A web component to render JSON reports generated using the custom Playwright AxeAggregateReporter",
+  "main": "index.js",
+  "scripts": {
+    "prettier:lint": "prettier .",
+    "prettier:format": "prettier --write .",
+    "lint:eslint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schalkneethling/axe-aggregate-reporter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/schalkneethling/axe-aggregate-reporter/issues"
+  },
+  "homepage": "https://github.com/schalkneethling/axe-aggregate-reporter#readme",
+  "devDependencies": {
+    "@eslint/css": "^0.10.0",
+    "@eslint/js": "^9.34.0",
+    "@html-eslint/eslint-plugin": "^0.46.1",
+    "@html-eslint/parser": "^0.46.0",
+    "eslint": "^9.34.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.3.0",
+    "prettier": "^3.6.2"
+  }
+}

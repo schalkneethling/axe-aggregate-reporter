@@ -1,0 +1,167 @@
+.button,
+.button-ghost {
+  cursor: pointer;
+}
+
+.button-ghost {
+  background: none;
+  border: 0;
+
+  &:focus,
+  &:hover {
+    color: var(--minimalist-link-color, var(--link-color));
+  }
+}
+
+.button {
+  /* to ensure a border is visible on Windows high-contrast mode */
+  border: var(--minimalist-button-border-default, var(--border-transparent));
+  display: inline-block;
+  padding-block: var(--minimalist-button-padding-block, var(--size-8));
+  padding-inline: var(--minimalist-button-padding-inline, var(--size-16));
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease-in,
+    border-color 0.2s ease-in;
+
+  &:focus,
+  &:hover {
+    background-color: var(
+      --minimalist-button-hover-bg-color,
+      var(--color-neutral-30)
+    );
+    border-color: var(
+      --minimalist-button-solid-hover-border-color,
+      var(--color-neutral-30)
+    );
+  }
+
+  &:focus-visible {
+    border-color: var(
+      --minimalist-button-focus-visible-border-color,
+      var(--color-neutral-10)
+    );
+    outline: 0.125rem solid
+      var(
+        --minimalist-button-focus-visible-outline-color,
+        var(--color-neutral-80)
+      );
+    outline-offset: 0.125rem;
+  }
+
+  &.rounded {
+    border-radius: var(
+      --minimalist-button-border-radius-default,
+      var(--border-radius-default)
+    );
+  }
+
+  &.bordered {
+    border: var(
+      --minimalist-button-primary-border,
+      var(--border-primary-border)
+    );
+  }
+
+  &.critical {
+    background-color: var(
+      --minimalist-button-critical-bg-color,
+      var(--color-red-90)
+    );
+    border-color: var(
+      --minimalist-button-critical-border-color,
+      var(--color-red-90)
+    );
+    color: var(--minimalist-button-critical-txt-color, var(--color-red-10));
+
+    &:focus,
+    &:hover {
+      background-color: var(
+        --minimalist-button-critical-hover-bg-color,
+        var(--color-red-70)
+      );
+      border-color: var(
+        --minimalist-button-critical-hover-border-color,
+        var(--color-red-70)
+      );
+    }
+  }
+
+  &.outline {
+    background-color: transparent;
+    border: var(
+      --minimalist-button-primary-border,
+      var(--border-primary-border)
+    );
+
+    &:focus,
+    &:hover {
+      background-color: var(
+        --minimalist-button-hover-bg-color,
+        var(--color-neutral-30)
+      );
+    }
+  }
+
+  &.outline.critical {
+    border-color: var(
+      --minimalist-button-outline-critical-border-color,
+      var(--color-red-80)
+    );
+    color: var(
+      --minimalist-button-outline-critical-txt-color,
+      var(--color-red-90)
+    );
+
+    &:focus,
+    &:hover {
+      background-color: var(
+        --minimalist-button-hover-bg-color,
+        var(--color-red-30)
+      );
+    }
+  }
+
+  &.solid {
+    background-color: var(
+      --minimalist-button-bg-color,
+      var(--color-neutral-90)
+    );
+    border-color: var(
+      --minimalist-button-solid-border-color,
+      var(--color-neutral-90)
+    );
+    color: var(
+      --minimalist-button-solid-txt-color,
+      var(--color-neutral-inverted)
+    );
+
+    &:focus,
+    &:hover {
+      background-color: var(
+        --minimalist-button-hover-bg-color,
+        var(--color-neutral-70)
+      );
+      border-color: var(
+        --minimalist-button-solid-hover-border-color,
+        var(--color-neutral-70)
+      );
+    }
+  }
+}
+
+.button-icon {
+  align-items: center;
+  display: flex;
+  gap: var(--minimalist-button-icon-gap, var(--size-8));
+
+  &.inline-end {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  svg {
+    block-size: var(--minimalist-icon-default-size, var(--icon-default-size));
+    inline-size: var(--minimalist-icon-default-size, var(--icon-default-size));
+  }
+}
