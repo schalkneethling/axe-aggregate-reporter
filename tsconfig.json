@@ -1,0 +1,4 @@
+{
+  "extends": "./.project-calavera/tsconfig.json",
+  "include": ["src/**/*.ts", "tests/**/*.ts"]
+}

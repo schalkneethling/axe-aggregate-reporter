@@ -1,0 +1,35 @@
+[
+  {
+    "testId": "sample-failing-page",
+    "title": "Sample failing page",
+    "status": "failed",
+    "axe": {
+      "url": "https://example.com/failing",
+      "failed": [
+        {
+          "id": "button-name",
+          "impact": "critical",
+          "tags": ["cat.name-role-value", "wcag2a", "wcag412"],
+          "description": "Ensures buttons have discernible text",
+          "help": "Buttons must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/button-name?application=playwright",
+          "nodes": [
+            {
+              "html": "<button></button>",
+              "target": ["button"],
+              "checks": [
+                {
+                  "id": "button-has-visible-text",
+                  "impact": "critical",
+                  "message": "Element does not have inner text that is visible to screen readers"
+                }
+              ]
+            }
+          ],
+          "totalNodes": 1
+        }
+      ],
+      "passed": []
+    }
+  }
+]

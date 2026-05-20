@@ -1,0 +1,274 @@
+{
+  "id": "aria-allowed-attr",
+  "impact": null,
+  "tags": ["cat.aria", "wcag2a", "wcag412", "EN-301-549", "EN-9.4.1.2"],
+  "description": "Ensure an element's role supports its ARIA attributes",
+  "help": "Elements must only use supported ARIA attributes",
+  "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/aria-allowed-attr?application=playwright",
+  "nodes": [
+    {
+      "any": [],
+      "all": [
+        {
+          "id": "aria-allowed-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attributes are used correctly for the defined role"
+        }
+      ],
+      "none": [
+        {
+          "id": "aria-unsupported-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attribute is supported"
+        }
+      ],
+      "impact": null,
+      "html": "<a class=\"Header-logoLink\" href=\"/\" aria-label=\"Dole logo\">",
+      "target": [".Header-logoLink"]
+    },
+    {
+      "any": [],
+      "all": [
+        {
+          "id": "aria-allowed-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attributes are used correctly for the defined role"
+        }
+      ],
+      "none": [
+        {
+          "id": "aria-unsupported-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attribute is supported"
+        }
+      ],
+      "impact": null,
+      "html": "<nav class=\"HeaderMenuNav\" aria-label=\"main\" itemscope=\"\" itemtype=\"http://schema.org/SiteNavigationElement\">",
+      "target": [".HeaderMenuNav"]
+    },
+    {
+      "any": [],
+      "all": [
+        {
+          "id": "aria-allowed-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attributes are used correctly for the defined role"
+        }
+      ],
+      "none": [
+        {
+          "id": "aria-unsupported-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attribute is supported"
+        }
+      ],
+      "impact": null,
+      "html": "<button type=\"button\" class=\"HeaderMenuNav-entry HeaderMenuNav-entry--button HeaderMenuNav-entry--lvl1 u-linkHover\" aria-controls=\"HeaderMenuNav-2-2\" aria-expanded=\"false\">",
+      "target": ["button[aria-controls=\"HeaderMenuNav-2-2\"]"]
+    },
+    {
+      "any": [],
+      "all": [
+        {
+          "id": "aria-allowed-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attributes are used correctly for the defined role"
+        }
+      ],
+      "none": [
+        {
+          "id": "aria-unsupported-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attribute is supported"
+        }
+      ],
+      "impact": null,
+      "html": "<button type=\"button\" class=\"HeaderMenuNav-entry HeaderMenuNav-entry--button HeaderMenuNav-entry--lvl1 u-linkHover\" aria-controls=\"HeaderMenuNav-2-3\" aria-expanded=\"false\">",
+      "target": ["button[aria-controls=\"HeaderMenuNav-2-3\"]"]
+    },
+    {
+      "any": [],
+      "all": [
+        {
+          "id": "aria-allowed-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attributes are used correctly for the defined role"
+        }
+      ],
+      "none": [
+        {
+          "id": "aria-unsupported-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attribute is supported"
+        }
+      ],
+      "impact": null,
+      "html": "<input data-drupal-selector=\"edit-first-name\" size=\"60\" aria-required=\"true\" id=\"edit-first-name\" name=\"first_name\" class=\"Input form-text required\" type=\"text\" required=\"\" autocomplete=\"given-name\">",
+      "target": ["#edit-first-name"]
+    },
+    {
+      "any": [],
+      "all": [
+        {
+          "id": "aria-allowed-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attributes are used correctly for the defined role"
+        }
+      ],
+      "none": [
+        {
+          "id": "aria-unsupported-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attribute is supported"
+        }
+      ],
+      "impact": null,
+      "html": "<input data-drupal-selector=\"edit-last-name\" size=\"60\" aria-required=\"true\" id=\"edit-last-name\" name=\"last_name\" class=\"Input form-text required\" type=\"text\" required=\"\" autocomplete=\"family-name\">",
+      "target": ["#edit-last-name"]
+    },
+    {
+      "any": [],
+      "all": [
+        {
+          "id": "aria-allowed-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attributes are used correctly for the defined role"
+        }
+      ],
+      "none": [
+        {
+          "id": "aria-unsupported-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attribute is supported"
+        }
+      ],
+      "impact": null,
+      "html": "<input data-drupal-selector=\"edit-email-address\" size=\"60\" aria-required=\"true\" id=\"edit-email-address\" name=\"email_address\" class=\"Input form-email required\" type=\"email\" required=\"\" autocomplete=\"email\">",
+      "target": ["#edit-email-address"]
+    },
+    {
+      "any": [],
+      "all": [
+        {
+          "id": "aria-allowed-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attributes are used correctly for the defined role"
+        }
+      ],
+      "none": [
+        {
+          "id": "aria-unsupported-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attribute is supported"
+        }
+      ],
+      "impact": null,
+      "html": "<input data-drupal-selector=\"edit-zip-code\" size=\"60\" aria-required=\"true\" id=\"edit-zip-code\" name=\"zip_code\" class=\"Input form-text required\" type=\"text\" required=\"\" autocomplete=\"postal-code\">",
+      "target": ["#edit-zip-code"]
+    },
+    {
+      "any": [],
+      "all": [
+        {
+          "id": "aria-allowed-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attributes are used correctly for the defined role"
+        }
+      ],
+      "none": [
+        {
+          "id": "aria-unsupported-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attribute is supported"
+        }
+      ],
+      "impact": null,
+      "html": "<nav class=\"FooterMenu-nav\" aria-label=\"footer\" itemscope=\"\" itemtype=\"http://schema.org/SiteNavigationElement\">",
+      "target": [".FooterMenu-nav"]
+    },
+    {
+      "any": [],
+      "all": [
+        {
+          "id": "aria-allowed-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attributes are used correctly for the defined role"
+        }
+      ],
+      "none": [
+        {
+          "id": "aria-unsupported-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attribute is supported"
+        }
+      ],
+      "impact": null,
+      "html": "<nav class=\"LegalMenu-nav\" aria-label=\"legal-en\" itemscope=\"\" itemtype=\"http://schema.org/SiteNavigationElement\">",
+      "target": [".LegalMenu-nav"]
+    },
+    {
+      "any": [],
+      "all": [
+        {
+          "id": "aria-allowed-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attributes are used correctly for the defined role"
+        }
+      ],
+      "none": [
+        {
+          "id": "aria-unsupported-attr",
+          "data": null,
+          "relatedNodes": [],
+          "impact": "critical",
+          "message": "ARIA attribute is supported"
+        }
+      ],
+      "impact": null,
+      "html": "<div id=\"drupal-live-announce\" class=\"visually-hidden\" aria-live=\"polite\" aria-busy=\"false\"></div>",
+      "target": ["#drupal-live-announce"]
+    }
+  ]
+}

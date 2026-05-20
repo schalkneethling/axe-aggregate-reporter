@@ -1,0 +1,10 @@
+[
+  {
+    "title": "Accessible fixture",
+    "url": "tests/pages/accessible.html"
+  },
+  {
+    "title": "Button fixture",
+    "url": "tests/pages/button.html"
+  }
+]

@@ -1,18 +1,51 @@
 {
   "name": "axe-aggregate-reporter",
-  "version": "1.0.0",
-  "description": "A web component to render JSON reports generated using the custom Playwright AxeAggregateReporter",
-  "main": "index.js",
+  "version": "0.5.0",
+  "description": "Aggregate Playwright axe accessibility results into a stable JSON report and static viewer.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./reporter": {
+      "types": "./dist/reporter.d.ts",
+      "default": "./dist/reporter.js"
+    },
+    "./viewer": "./js/axe-aggregate-reporter.js",
+    "./viewer-icons": "./js/lucide-icons.js",
+    "./viewer.css": "./css/axe-aggregate-reporter.css"
+  },
+  "files": [
+    "css/axe-aggregate-reporter.css",
+    "dist",
+    "js/axe-aggregate-reporter.js",
+    "js/lucide-icons.js",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
-    "prettier:lint": "prettier .",
+    "test": "npm run build:ts && npm run lint:eslint && npm run test:unit -- --run && npm run test:e2e",
+    "prettier:lint": "prettier --check .",
     "prettier:format": "prettier --write .",
-    "lint:eslint": "eslint ."
+    "lint:eslint": "eslint .",
+    "build:ts": "tsc -p tsconfig.build.json",
+    "test:unit": "vitest",
+    "test:e2e": "playwright test",
+    "test:all": "npm run test:unit && npm run test:e2e"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/schalkneethling/axe-aggregate-reporter.git"
   },
-  "keywords": [],
+  "keywords": [
+    "accessibility",
+    "axe",
+    "playwright",
+    "reporter",
+    "wcag"
+  ],
   "author": "",
   "license": "MIT",
   "type": "module",
@@ -21,13 +54,19 @@
   },
   "homepage": "https://github.com/schalkneethling/axe-aggregate-reporter#readme",
   "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
     "@eslint/css": "^0.10.0",
     "@eslint/js": "^9.34.0",
     "@html-eslint/eslint-plugin": "^0.46.1",
     "@html-eslint/parser": "^0.46.0",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0",
+    "axe-core": "^4.10.3",
     "eslint": "^9.34.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^16.3.0",
-    "prettier": "^3.6.2"
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
   }
 }

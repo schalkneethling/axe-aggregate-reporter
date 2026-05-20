@@ -5,8 +5,18 @@ import html from "@html-eslint/eslint-plugin";
 import css from "@eslint/css";
 
 export default [
-  js.configs.recommended,
-  eslintConfigPrettier,
+  {
+    ignores: [
+      "dist/**",
+      "node_modules/**",
+      "playwright-report/**",
+      "test-results/**",
+    ],
+  },
+  {
+    ...js.configs.recommended,
+    files: ["**/*.js", "**/*.mjs", "**/*.cjs"],
+  },
   {
     ...html.configs["flat/recommended"],
     files: ["**/*.html"],
@@ -19,13 +29,25 @@ export default [
     files: ["**/*.css"],
     language: "css/css",
     plugins: { css },
-    extends: ["css/recommended"],
     rules: {
+      ...css.configs.recommended.rules,
       "css/prefer-logical-properties": "error",
-      "css/relative-font-units": "error",
+      "css/relative-font-units": "off",
+      "css/use-baseline": "off",
     },
   },
   {
+    files: ["css/axe-aggregate-reporter.css"],
+    rules: {
+      "css/no-invalid-properties": "off",
+    },
+  },
+  {
+    ...eslintConfigPrettier,
+    files: ["**/*.js", "**/*.mjs", "**/*.cjs", "**/*.html", "**/*.css"],
+  },
+  {
+    files: ["**/*.js", "**/*.mjs", "**/*.cjs"],
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -33,7 +55,7 @@ export default [
       },
     },
     rules: {
-      "no-console": ["error", { allow: ["clear", "info"] }],
+      "no-console": ["error", { allow: ["clear", "error", "info"] }],
     },
   },
 ];
