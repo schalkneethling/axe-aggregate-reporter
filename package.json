@@ -73,6 +73,6 @@
     "multiocular": "0.8.3",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2",
-    "vitest": "^3.2.4"
+    "vitest": "^4.1.6"
   }
 }
