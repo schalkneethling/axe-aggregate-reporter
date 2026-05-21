@@ -20,28 +20,57 @@ pnpm add --save-dev @schalkneethling/axe-aggregate-reporter @axe-core/playwright
 
 ## Playwright setup
 
-Configure Playwright to use the reporter:
+Configure your Playwright accessibility test run to use the reporter alongside
+your normal console reporter:
 
 ```ts
 import { defineConfig } from "@playwright/test";
 
 export default defineConfig({
-  reporter: "@schalkneethling/axe-aggregate-reporter/reporter",
+  reporter: [["list"], ["@schalkneethling/axe-aggregate-reporter/reporter"]],
 });
 ```
 
-Attach a formatted axe report in each accessibility test:
+This reporter is intended for Playwright tests that run `@axe-core/playwright`
+and attach a formatted `axe.json` result. If your project also has integration,
+end-to-end, or visual regression tests, use this reporter in the config or npm
+script that runs your axe accessibility specs rather than treating it as the
+default reporter for every Playwright test suite.
+
+Keep the axe setup in your project so you can choose the WCAG tags and any
+project-specific axe options. For example, create a local accessibility fixture:
+
+```ts
+import { test as base } from "@playwright/test";
+import { AxeBuilder } from "@axe-core/playwright";
+
+export const test = base.extend<{
+  makeAxeBuilder: () => AxeBuilder;
+}>({
+  makeAxeBuilder: async ({ page }, use) => {
+    await use(() =>
+      new AxeBuilder({ page })
+        .options({ reporter: "v2" })
+        .withTags(["wcag22a", "wcag22aa"]),
+    );
+  },
+});
+
+export { expect } from "@playwright/test";
+```
+
+Then use that fixture in each accessibility spec and attach a formatted axe
+report named `axe.json`:
 
 ```ts
 import fs from "node:fs/promises";
-import { test, expect } from "@playwright/test";
-import { AxeBuilder } from "@axe-core/playwright";
 import { formatFullReport } from "@schalkneethling/axe-aggregate-reporter";
+import { test, expect } from "./fixtures/axe-test-fixture.js";
 
-test("page is accessible", async ({ page }, testInfo) => {
+test("page is accessible", async ({ page, makeAxeBuilder }, testInfo) => {
   await page.goto("https://example.com");
 
-  const results = await new AxeBuilder({ page }).analyze();
+  const results = await makeAxeBuilder().analyze();
   const file = testInfo.outputPath("axe.json");
 
   await fs.writeFile(file, JSON.stringify(formatFullReport(results), null, 2));
@@ -53,6 +82,10 @@ test("page is accessible", async ({ page }, testInfo) => {
   expect(results.violations).toEqual([]);
 });
 ```
+
+The reporter only includes tests that attach a formatted `axe.json` file, so
+other Playwright tests can run in the same repository without appearing in the
+aggregate accessibility report.
 
 The reporter writes `full-report.json` in the Playwright root directory.
 
