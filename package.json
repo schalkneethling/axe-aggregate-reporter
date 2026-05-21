@@ -1,6 +1,6 @@
 {
   "name": "@schalkneethling/axe-aggregate-reporter",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Aggregate Playwright axe accessibility results into a stable JSON report and static viewer.",
   "packageManager": "pnpm@10.33.2",
   "engines": {
@@ -8,6 +8,9 @@
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "bin": {
+    "axe-aggregate-viewer": "./bin/axe-aggregate-viewer.js"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -22,6 +25,7 @@
     "./viewer.css": "./css/axe-aggregate-reporter.css"
   },
   "files": [
+    "bin/axe-aggregate-viewer.js",
     "css/axe-aggregate-reporter.css",
     "dist",
     "js/axe-aggregate-reporter.js",
@@ -31,6 +35,7 @@
   ],
   "scripts": {
     "test": "pnpm run build:ts && pnpm run lint:eslint && pnpm run test:unit && pnpm run test:e2e",
+    "viewer": "node ./bin/axe-aggregate-viewer.js",
     "dependencies:review": "multiocular",
     "prettier:lint": "prettier --check .",
     "prettier:format": "prettier --write .",
