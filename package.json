@@ -77,7 +77,7 @@
     "globals": "^16.3.0",
     "multiocular": "0.8.3",
     "prettier": "^3.6.2",
-    "typescript": "^5.9.2",
+    "typescript": "^6.0.3",
     "vitest": "^4.1.6"
   }
 }
