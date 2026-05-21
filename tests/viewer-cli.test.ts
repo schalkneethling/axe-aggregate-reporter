@@ -28,7 +28,7 @@ test("writes a standalone viewer with embedded report JSON", async () => {
             helpUrl: "https://dequeuniversity.com/",
             nodes: [
               {
-                html: "</script><p>Still JSON</p>",
+                html: "</SCRIPT><p>Still JSON</p>",
                 target: ["body"],
                 checks: [
                   {

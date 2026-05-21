@@ -105,10 +105,10 @@ When working in this repository, the equivalent local script is:
 pnpm viewer ./path/to/full-report.json
 ```
 
-The command copies the target report to an ignored `.viewer-report.json` scratch
-file in the viewer package, starts a local static server, and opens the viewer in
-your browser. Use `--port 4173` to choose a port or `--no-open` to leave browser
-opening to you.
+The command copies the target report to an ignored `/.viewer-report.json`
+scratch file at the package root, starts a local static server, and opens the
+viewer in your browser. Use `--port 4173` to choose a port or `--no-open` to
+leave browser opening to you.
 
 To create a self-contained HTML report for short-lived sharing services such as
 [Ephemeral Pages](https://ephemeral.schalkneethling.com/), export a standalone

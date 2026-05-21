@@ -135,3 +135,38 @@ test("renders embedded report JSON from an inert script", async ({ page }) => {
     page.getByRole("heading", { name: "Sample failing page" }),
   ).toBeVisible();
 });
+
+test("treats embedded report JSON as authoritative when it is invalid", async ({ page }) => {
+  const css = await fs.readFile("css/axe-aggregate-reporter.css", "utf-8");
+  const icons = (await fs.readFile("js/lucide-icons.js", "utf-8")).replace(
+    "export const createIcon",
+    "const createIcon",
+  );
+  const reporter = (
+    await fs.readFile("js/axe-aggregate-reporter.js", "utf-8")
+  ).replace('import { createIcon } from "./lucide-icons.js";\n\n', "");
+
+  await page.setContent(`
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <title>Report viewer</title>
+        <style>${css}</style>
+      </head>
+      <body>
+        <axe-aggregate-reporter
+          data-script="report-data"
+          src="missing.json"
+        ></axe-aggregate-reporter>
+        <script id="report-data" type="application/json">false</script>
+        <script type="module">${icons}${reporter}</script>
+      </body>
+    </html>
+  `);
+
+  await expect(
+    page.getByText(
+      "Unable to load report. The report must be a top-level array.",
+    ),
+  ).toBeVisible();
+});

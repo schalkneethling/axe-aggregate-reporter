@@ -40,10 +40,10 @@ class AxeAggregateReporter extends HTMLElement {
     this.#renderState("Loading accessibility report...");
 
     try {
-      const embeddedReport = this.#getEmbeddedReport();
+      const hasEmbeddedReport = this.hasAttribute("data-script");
 
-      if (embeddedReport) {
-        this.#setReport(embeddedReport);
+      if (hasEmbeddedReport) {
+        this.#setReport(this.#getEmbeddedReport());
         return;
       }
 

@@ -131,7 +131,7 @@ async function copyReport(reportPath) {
 }
 
 function escapeJsonForHtml(rawReport) {
-  return rawReport.replaceAll("</script", "<\\/script");
+  return rawReport.replaceAll(/<\/script/gi, "<\\/script");
 }
 
 function stripModuleImport(source) {
