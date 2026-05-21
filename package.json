@@ -60,10 +60,10 @@
   "homepage": "https://github.com/schalkneethling/axe-aggregate-reporter#readme",
   "devDependencies": {
     "@axe-core/playwright": "^4.10.2",
-    "@eslint/css": "^0.10.0",
+    "@eslint/css": "^1.2.0",
     "@eslint/js": "^9.34.0",
     "@html-eslint/eslint-plugin": "^0.46.1",
-    "@html-eslint/parser": "^0.46.0",
+    "@html-eslint/parser": "^0.60.0",
     "@playwright/test": "^1.55.0",
     "@types/node": "^24.3.0",
     "axe-core": "^4.10.3",
@@ -73,6 +73,6 @@
     "multiocular": "0.8.3",
     "prettier": "^3.6.2",
     "typescript": "^5.9.2",
-    "vitest": "^3.2.4"
+    "vitest": "^4.1.6"
   }
 }
