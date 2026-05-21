@@ -113,4 +113,13 @@ jobs:
           path: package
 
       - name: Publish package
-        run: npm publish package/*.tgz --access public --provenance
+        run: |
+          tarball="$(find package -type f -name '*.tgz' -print -quit)"
+
+          if [ -z "$tarball" ]; then
+            echo "No package tarball found in downloaded artifact."
+            find package -maxdepth 3 -type f -print
+            exit 1
+          fi
+
+          npm publish "$tarball" --access public --provenance
