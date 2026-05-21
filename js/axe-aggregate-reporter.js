@@ -10,8 +10,10 @@ const impactLabels = {
   unknown: "Unknown impact",
 };
 
+const defaultReportSrc = "./full-report.json";
+
 class AxeAggregateReporter extends HTMLElement {
-  static observedAttributes = ["src"];
+  static observedAttributes = ["data-script", "src"];
 
   #filters = {
     impact: "all",
@@ -25,31 +27,34 @@ class AxeAggregateReporter extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === "src" && oldValue !== newValue && this.isConnected) {
+    if (
+      (name === "data-script" || name === "src") &&
+      oldValue !== newValue &&
+      this.isConnected
+    ) {
       void this.#loadReport();
     }
   }
 
   async #loadReport() {
-    const src = this.getAttribute("src") ?? "./full-report.json";
-
     this.#renderState("Loading accessibility report...");
 
     try {
+      const hasEmbeddedReport = this.hasAttribute("data-script");
+
+      if (hasEmbeddedReport) {
+        this.#setReport(this.#getEmbeddedReport());
+        return;
+      }
+
+      const src = this.getAttribute("src") ?? this.#getReportSrcFromUrl();
       const response = await fetch(src);
 
       if (!response.ok) {
         throw new Error(`The report request failed with ${response.status}.`);
       }
 
-      const report = await response.json();
-
-      if (!Array.isArray(report)) {
-        throw new Error("The report must be a top-level array.");
-      }
-
-      this.#report = report;
-      this.#renderReport();
+      this.#setReport(await response.json());
     } catch (error) {
       this.#renderState(
         error instanceof Error
@@ -57,6 +62,37 @@ class AxeAggregateReporter extends HTMLElement {
           : "Unable to load report.",
       );
     }
+  }
+
+  #getEmbeddedReport() {
+    const scriptId = this.getAttribute("data-script");
+
+    if (!scriptId) {
+      return null;
+    }
+
+    const script = document.getElementById(scriptId);
+
+    if (!script) {
+      throw new Error(`Unable to find embedded report script "${scriptId}".`);
+    }
+
+    return JSON.parse(script.textContent ?? "");
+  }
+
+  #getReportSrcFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+
+    return params.get("src") ?? params.get("report") ?? defaultReportSrc;
+  }
+
+  #setReport(report) {
+    if (!Array.isArray(report)) {
+      throw new Error("The report must be a top-level array.");
+    }
+
+    this.#report = report;
+    this.#renderReport();
   }
 
   #createElement(tagName, className, textContent) {

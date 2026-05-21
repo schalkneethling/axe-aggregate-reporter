@@ -10,6 +10,7 @@ Reach for this when you already use Playwright with `@axe-core/playwright`, but 
 - Formatter utilities for converting axe results into the beta schema.
 - A static custom element viewer exported as `@schalkneethling/axe-aggregate-reporter/viewer`.
 - A CSS file exported as `@schalkneethling/axe-aggregate-reporter/viewer.css`.
+- A viewer CLI for local review and standalone HTML export.
 - Deterministic local fixture tests for the reporter/viewer path.
 
 ## Install
@@ -91,6 +92,45 @@ The reporter writes `full-report.json` in the Playwright root directory.
 
 ## Viewer setup
 
+For local review, use the packaged viewer command from the project where your
+report was generated:
+
+```sh
+pnpm exec axe-aggregate-viewer ./full-report.json
+```
+
+When working in this repository, the equivalent local script is:
+
+```sh
+pnpm viewer ./path/to/full-report.json
+```
+
+The command copies the target report to an ignored `/.viewer-report.json`
+scratch file at the package root, starts a local static server, and opens the
+viewer in your browser. Use `--port 4173` to choose a port or `--no-open` to
+leave browser opening to you.
+
+To create a self-contained HTML report for short-lived sharing services such as
+[Ephemeral Pages](https://ephemeral.schalkneethling.com/), export a standalone
+viewer:
+
+```sh
+pnpm exec axe-aggregate-viewer ./full-report.json --standalone
+```
+
+By default, the command writes the standalone page to the gitignored
+`reports/axe-aggregate-report.html` file. Pass a path after `--standalone` to
+choose a different output file:
+
+```sh
+pnpm exec axe-aggregate-viewer ./full-report.json --standalone reports/team-report.html
+```
+
+The standalone report inlines the viewer CSS, JavaScript, icons, and report JSON.
+The report data is embedded in an inert
+`<script type="application/json">` block, so the page does not need to fetch any
+external files.
+
 Use the custom element on any static page that can fetch the generated JSON file:
 
 ```html
@@ -108,6 +148,31 @@ Use the custom element on any static page that can fetch the generated JSON file
   </body>
 </html>
 ```
+
+For a standalone page, embed the report data in the DOM and point the viewer at
+that script:
+
+```html
+<axe-aggregate-reporter data-script="axe-aggregate-report-data"></axe-aggregate-reporter>
+<script id="axe-aggregate-report-data" type="application/json">
+  []
+</script>
+```
+
+When the viewer page does not set a `src` attribute, it loads
+`./full-report.json` by default. You can also point the packaged viewer at any
+report URL the page can fetch with a query string:
+
+```txt
+index.html?src=http://localhost:4173/full-report.json
+index.html?report=./reports/full-report.json
+```
+
+Browsers cannot fetch arbitrary filesystem paths such as
+`/Users/me/project/full-report.json` from a static page unless that path is
+served over HTTP or selected through a browser file picker. For local project
+reports, run a small static server in the project that generated the report and
+pass that URL to the viewer.
 
 The viewer supports loading, empty, invalid report, and fetch-error states. It renders a summary, test-level sections, failed and passed checks, impact labels, node targets, check messages, and Deque help links.
 
@@ -141,6 +206,8 @@ All project CSS should use logical properties and values. Keep declarations alph
 ```sh
 pnpm run build:ts
 pnpm run lint:eslint
+pnpm viewer ./full-report.json
+pnpm viewer ./full-report.json --standalone
 pnpm run test:unit
 pnpm run test:e2e
 pnpm test
