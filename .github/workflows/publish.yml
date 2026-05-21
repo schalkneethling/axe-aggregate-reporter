@@ -122,4 +122,4 @@ jobs:
             exit 1
           fi
 
-          npm publish "$tarball" --access public --provenance
+          npm publish "$(realpath "$tarball")" --access public --provenance
