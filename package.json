@@ -1,7 +1,10 @@
 {
-  "name": "axe-aggregate-reporter",
+  "name": "@schalkneethling/axe-aggregate-reporter",
   "version": "0.5.0",
   "description": "Aggregate Playwright axe accessibility results into a stable JSON report and static viewer.",
+  "engines": {
+    "node": ">=24.8.0"
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -46,7 +49,7 @@
     "reporter",
     "wcag"
   ],
-  "author": "",
+  "author": "Schalk Neethling <schalkneethling@duck.com>",
   "license": "MIT",
   "type": "module",
   "bugs": {

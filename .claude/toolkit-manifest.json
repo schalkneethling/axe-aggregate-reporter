@@ -1,0 +1,13 @@
+{
+  "commands": {},
+  "hooks": {},
+  "skills": {
+    "npm-publishing-best-practices": {
+      "hash": "7f379cf",
+      "installedAt": "2026-05-21",
+      "linkedTo": [
+        ".claude/skills"
+      ]
+    }
+  }
+}
