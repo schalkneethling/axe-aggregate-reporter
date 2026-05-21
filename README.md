@@ -15,7 +15,7 @@ Reach for this when you already use Playwright with `@axe-core/playwright`, but 
 ## Install
 
 ```sh
-npm install --save-dev @schalkneethling/axe-aggregate-reporter @axe-core/playwright @playwright/test
+pnpm add --save-dev @schalkneethling/axe-aggregate-reporter @axe-core/playwright @playwright/test
 ```
 
 ## Playwright setup
@@ -106,12 +106,12 @@ All project CSS should use logical properties and values. Keep declarations alph
 ## Scripts
 
 ```sh
-npm run build:ts
-npm run lint:eslint
-npm run test:unit -- --run
-npm run test:e2e
-npm test
-npm pack --dry-run
+pnpm run build:ts
+pnpm run lint:eslint
+pnpm run test:unit
+pnpm run test:e2e
+pnpm test
+pnpm pack --dry-run
 ```
 
 ## Beta limitations

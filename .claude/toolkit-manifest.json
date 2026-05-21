@@ -8,6 +8,13 @@
       "linkedTo": [
         ".claude/skills"
       ]
+    },
+    "more-secure-dependabot-config": {
+      "hash": "7eafb6e",
+      "installedAt": "2026-05-21",
+      "linkedTo": [
+        ".claude/skills"
+      ]
     }
   }
 }
