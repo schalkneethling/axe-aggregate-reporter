@@ -22,7 +22,9 @@ jobs:
         with:
           node-version-file: package.json
       - name: Enable Corepack
-        run: corepack enable
+        run: |
+          corepack enable
+          corepack prepare pnpm@10.33.2 --activate
       - name: Install dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts
       - name: Install Playwright Browsers
