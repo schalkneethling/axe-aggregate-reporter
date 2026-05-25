@@ -1,6 +1,6 @@
 {
   "name": "@schalkneethling/axe-aggregate-reporter",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Aggregate Playwright axe accessibility results into a stable JSON report and static viewer.",
   "packageManager": "pnpm@10.33.2",
   "engines": {
