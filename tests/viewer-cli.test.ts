@@ -7,6 +7,19 @@ import { expect, test } from "vitest";
 
 const execFileAsync = promisify(execFile);
 
+test("packages the static viewer files used by the CLI server", async () => {
+  const { stdout } = await execFileAsync("npm", ["pack", "--dry-run", "--json"]);
+  const [packResult] = JSON.parse(stdout);
+  const packageFiles = new Set(packResult.files.map((file) => file.path));
+
+  expect(packageFiles.has("index.html")).toBe(true);
+  expect(packageFiles.has("css/axe-aggregate-reporter.css")).toBe(true);
+  expect(packageFiles.has("js/axe-aggregate-reporter.js")).toBe(true);
+  expect(packageFiles.has("js/lucide-icons.js")).toBe(true);
+  expect(packageFiles.has("site.webmanifest")).toBe(true);
+  expect(packageFiles.has("favicon.svg")).toBe(true);
+});
+
 test("writes a standalone viewer with embedded report JSON", async () => {
   const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "axe-viewer-"));
   const reportPath = path.join(tempDir, "full-report.json");

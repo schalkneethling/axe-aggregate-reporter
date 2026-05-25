@@ -25,13 +25,21 @@
     "./viewer.css": "./css/axe-aggregate-reporter.css"
   },
   "files": [
+    "apple-touch-icon.png",
     "bin/axe-aggregate-viewer.js",
     "css/axe-aggregate-reporter.css",
     "dist",
+    "favicon.ico",
+    "favicon.svg",
+    "favicon-96x96.png",
+    "index.html",
     "js/axe-aggregate-reporter.js",
     "js/lucide-icons.js",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "site.webmanifest",
+    "web-app-manifest-192x192.png",
+    "web-app-manifest-512x512.png"
   ],
   "scripts": {
     "test": "pnpm run build:ts && pnpm run lint:eslint && pnpm run test:unit && pnpm run test:e2e",
