@@ -1,4 +1,7 @@
 {
   "extends": "./.project-calavera/tsconfig.json",
+  "compilerOptions": {
+    "types": ["node"]
+  },
   "include": ["src/**/*.ts", "tests/**/*.ts"]
 }
