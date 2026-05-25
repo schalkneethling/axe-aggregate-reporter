@@ -136,7 +136,15 @@ The report data is embedded in an inert
 `<script type="application/json">` block, so the page does not need to fetch any
 external files.
 
-Use the custom element on any static page that can fetch the generated JSON file:
+You can also embed the custom element on any static page that can fetch the
+generated JSON file. In an installed project, the viewer assets are provided by
+the package at
+`node_modules/@schalkneethling/axe-aggregate-reporter/css/axe-aggregate-reporter.css`
+and
+`node_modules/@schalkneethling/axe-aggregate-reporter/js/axe-aggregate-reporter.js`.
+Copy those files into your static site, or serve the package directory through
+your build tool, and update the `href` and `src` paths to match where your page
+serves them:
 
 ```html
 <!doctype html>
@@ -145,14 +153,17 @@ Use the custom element on any static page that can fetch the generated JSON file
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Accessibility report</title>
-    <link rel="stylesheet" href="./css/axe-aggregate-reporter.css" />
+    <link rel="stylesheet" href="/vendor/axe-aggregate-reporter/axe-aggregate-reporter.css" />
   </head>
   <body>
     <axe-aggregate-reporter src="./full-report.json"></axe-aggregate-reporter>
-    <script type="module" src="./js/axe-aggregate-reporter.js"></script>
+    <script type="module" src="/vendor/axe-aggregate-reporter/axe-aggregate-reporter.js"></script>
   </body>
 </html>
 ```
+
+When working inside this repository, those same assets live at
+`./css/axe-aggregate-reporter.css` and `./js/axe-aggregate-reporter.js`.
 
 For a standalone page, embed the report data in the DOM and point the viewer at
 that script:
