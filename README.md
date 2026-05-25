@@ -45,15 +45,20 @@ project-specific axe options. For example, create a local accessibility fixture:
 import { test as base } from "@playwright/test";
 import { AxeBuilder } from "@axe-core/playwright";
 
-export const test = base.extend<{
+type AxeTestFixture = {
   makeAxeBuilder: () => AxeBuilder;
-}>({
-  makeAxeBuilder: async ({ page }, use) => {
-    await use(() =>
+};
+
+export const test = base.extend<AxeTestFixture>({
+  makeAxeBuilder: async (
+    { page },
+    use: (r: () => AxeBuilder) => Promise<void>,
+  ) => {
+    const makeAxeBuilder = () =>
       new AxeBuilder({ page })
         .options({ reporter: "v2" })
-        .withTags(["wcag22a", "wcag22aa"]),
-    );
+        .withTags(["wcag2a", "wcag2aa", "wcag21a", "wcag21aa", "wcag22aa"]);
+    await use(makeAxeBuilder);
   },
 });
 
