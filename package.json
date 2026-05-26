@@ -80,7 +80,7 @@
     "@playwright/test": "^1.55.0",
     "@types/node": "^25.8.0",
     "axe-core": "^4.10.3",
-    "eslint": "^9.34.0",
+    "eslint": "^10.4.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.6.0",
     "multiocular": "0.8.3",
