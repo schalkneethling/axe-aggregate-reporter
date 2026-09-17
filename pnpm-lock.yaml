@@ -18,8 +18,8 @@ importers:
         specifier: ^9.34.0
         version: 9.39.4
       '@html-eslint/eslint-plugin':
-        specifier: ^0.60.0
-        version: 0.60.0(eslint@10.5.0)
+        specifier: ^0.66.0
+        version: 0.66.0(eslint@10.5.0)
       '@html-eslint/parser':
         specifier: ^0.62.0
         version: 0.62.0
@@ -271,36 +271,36 @@ packages:
     resolution: {integrity: sha512-+CNAzxglkrpNf/kKywqQfk74QjtceuOE7Qm+AF8miRvPF/wmmK5+OJOgVh3AVTT3RP2mH3+FOaxlE5v72owk0A==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
 
-  '@html-eslint/core@0.60.0':
-    resolution: {integrity: sha512-P2+ymEBt7EZ8sh1xc4XNA1/zSyDhSA1ppWyBBwPvGfY8VnDfmtd5UKr6AD24htABwzNJ6WcBIV3lAx5crtozfg==}
+  '@html-eslint/core@0.66.0':
+    resolution: {integrity: sha512-7zO32H2x91leamTOnslX2T6hGyeTLtXQeQF89QVw5Na1iqJul39fEVX/MCpwEC6195G30tzhSJuqjDU5HIM6VA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@html-eslint/eslint-plugin@0.60.0':
-    resolution: {integrity: sha512-pPi0ZdYLQiOs6cERfUr3qlnVrEALnG8nq9nbHCymwB8KSdsnGKzCa96+fbmcxEf5MF8dt/EDhHrgQjZ7gmNbWg==}
+  '@html-eslint/eslint-plugin@0.66.0':
+    resolution: {integrity: sha512-Oha7l7nENQHw5aCLzWaHyyF5bqrA1ODEbowEifMejMHM6Vauj6jJh8M/msIdnKwUBglPTkvFDH9vGaZVmGggfw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.0.0 || ^10.0.0-0'
 
-  '@html-eslint/parser@0.60.0':
-    resolution: {integrity: sha512-1ok6+L8uFktdS1BD5d9SuZ0BbI0uOmkv39HNWpkvpa4989ooGMDK0T+wEeqoLtiGtpnUMwlzx0849yO777g6vw==}
-
   '@html-eslint/parser@0.62.0':
     resolution: {integrity: sha512-kb3uR4AX0hex211zAiiNeCZQVVKm0KbSTjWUKaLGPB9DtoL4y0A4ZJXa9DF2GOIFWDt42xJUUvffB2/MEj3ReA==}
 
-  '@html-eslint/template-parser@0.60.0':
-    resolution: {integrity: sha512-V+txpL5DbBxsBfgtPGCpvXo3y2EdQDoViwL0KSA8iGOf1XwPAQlyM9wHEMG+KcDY3V9TxkEsFZAlCwVjtvAgCg==}
+  '@html-eslint/parser@0.66.0':
+    resolution: {integrity: sha512-/KE6i8DIO1TAL0YvAgqaXWKduvlnnj1Sy2PXM3UKJZsk0798sLrKMKOl6sXH8QuNxXsPsW1hlxIHsho9UfZI1A==}
 
-  '@html-eslint/template-syntax-parser@0.60.0':
-    resolution: {integrity: sha512-jw4eDxDtMfXZNPrms+QleG/NEu5uWtPXAr7uEmqAxwT5hhbFM+txwqqRtCdoBz/skUbKxcPnAQPotuJmXcRQzg==}
+  '@html-eslint/template-parser@0.66.0':
+    resolution: {integrity: sha512-eGo6mfWFahcVQE3+CGAK12QaYIURG8/xwb8ITw+5lrn0Mo1yUXFgdBODjx7E0Sd9sZ2FVw8JzMjMgxo4ntFdzA==}
 
   '@html-eslint/template-syntax-parser@0.62.0':
     resolution: {integrity: sha512-XPYul7JI6ld/a3vKOHmIWvCuNpOBc5YIiei5hHJQcCwLeIUyq3yGNUYyJSVF4k4QXe5ksyPfy0MRtOgA1tZ7Wg==}
 
-  '@html-eslint/types@0.60.0':
-    resolution: {integrity: sha512-3PJaoNKK/xSTnRLPMz/6ZEr0Snr4GRjYIQJrw+nDMek1K0HstQ7KIqI7XswzT/S1kXT7B16gwXanCTjIPybjmw==}
+  '@html-eslint/template-syntax-parser@0.66.0':
+    resolution: {integrity: sha512-HLHSaH0e4udBFqE+GDexZnXBSyaB4Mo42UfYQo+/hyFXMnY8QBWaFFqsKL/vwWccX1hAaC5nKDdKldoVPDgugw==}
 
   '@html-eslint/types@0.62.0':
     resolution: {integrity: sha512-lG/Pp0m7OTWmB3PBdAtZNwp35dwjhXVY0jwSqP/47sNPRzVmAOVgxWq2tBQYyH6wJYp3aFZiv1wivd9lUAQZvw==}
+
+  '@html-eslint/types@0.66.0':
+    resolution: {integrity: sha512-QrUudu/EA47xIE0nN5Wf0LlMkz1vGB/rks/3D/+9KtlmUzpGOn562AShyz1fYE1OBFjjEk86pJmCkHhIm4WO7g==}
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -493,8 +493,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rviscomi/capo.js@2.1.0':
-    resolution: {integrity: sha512-y6J+KJqsrY8AcDswLKkvd8KdpFindjS4Q9rSuK8CIpsQOepEjgRaMR4S8OtuLOQoVYLCROT3ffMQqRWrUMQdQA==}
+  '@rviscomi/capo.js@2.3.0':
+    resolution: {integrity: sha512-qY3QRtKdq//Z8jDENSUCAaSE76sUwHgN6pzoRXj6e5cSwQqxFLjm8B+GDkbtUr/WGWJRzoAMtz0I60TM1KrOBg==}
 
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
@@ -1063,14 +1063,14 @@ packages:
   vscode-css-languageservice@6.3.10:
     resolution: {integrity: sha512-eq5N9Er3fC4vA9zd9EFhyBG90wtCCuXgRSpAndaOgXMh1Wgep5lBgRIeDgjZBW9pa+332yC9+49cZMW8jcL3MA==}
 
-  vscode-languageserver-textdocument@1.0.12:
-    resolution: {integrity: sha512-cxWNPesCnQCcMPeenjKKsOCKQZ/L6Tv19DTRIGuLWe32lyzWhihGVJ/rcckZXJxfdKCFvRLS3fpBIsV/ZGX4zA==}
+  vscode-languageserver-textdocument@1.0.14:
+    resolution: {integrity: sha512-EQyqJMi552E4ZTf46izQ4Fj6XquqxCySR3J5ZSD1SisMf6RfpeOWHxGBE8Gr6V0/3GHIGdAzDn8F8+1nTGCnoQ==}
 
   vscode-languageserver-types@3.17.5:
     resolution: {integrity: sha512-Ld1VelNuX9pdF39h2Hgaeb5hEZM2Z3jUrrMgWQAu82jMtZp7p3vJT3BzToKtZI7NgQssZje5o0zryOrhQvzQAg==}
 
-  vscode-uri@3.1.0:
-    resolution: {integrity: sha512-/BpdSx+yCQGnCvecbyXdxHDkuk55/G3xwnC0GqY4gmQ3j+A+g8kzzgB4Nk/SINjqn6+waqw3EgbVF2QKExkRxQ==}
+  vscode-uri@3.2.0:
+    resolution: {integrity: sha512-m2gXo3bn0G1kT9InzMf07fTbqMbGtyckj3bH5ktLO+1Ssv+yiATZ4dhwaQv9UZWxJh6E9IFGnQyjgWVDWVBDrg==}
 
   which@2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
@@ -1249,29 +1249,22 @@ snapshots:
       '@eslint/core': 1.2.1
       levn: 0.4.1
 
-  '@html-eslint/core@0.60.0':
+  '@html-eslint/core@0.66.0':
     dependencies:
-      '@html-eslint/types': 0.60.0
+      '@html-eslint/types': 0.66.0
       html-standard: 0.0.13
 
-  '@html-eslint/eslint-plugin@0.60.0(eslint@10.5.0)':
+  '@html-eslint/eslint-plugin@0.66.0(eslint@10.5.0)':
     dependencies:
       '@eslint/plugin-kit': 0.4.1
-      '@html-eslint/core': 0.60.0
-      '@html-eslint/parser': 0.60.0
-      '@html-eslint/template-parser': 0.60.0
-      '@html-eslint/template-syntax-parser': 0.60.0
-      '@html-eslint/types': 0.60.0
-      '@rviscomi/capo.js': 2.1.0
+      '@html-eslint/core': 0.66.0
+      '@html-eslint/parser': 0.66.0
+      '@html-eslint/template-parser': 0.66.0
+      '@html-eslint/template-syntax-parser': 0.66.0
+      '@html-eslint/types': 0.66.0
+      '@rviscomi/capo.js': 2.3.0
       eslint: 10.5.0
       html-standard: 0.0.13
-
-  '@html-eslint/parser@0.60.0':
-    dependencies:
-      '@html-eslint/template-syntax-parser': 0.60.0
-      '@html-eslint/types': 0.60.0
-      css-tree: 3.2.1
-      es-html-parser: 0.3.1
 
   '@html-eslint/parser@0.62.0':
     dependencies:
@@ -1280,26 +1273,33 @@ snapshots:
       css-tree: 3.2.1
       es-html-parser: 0.3.1
 
-  '@html-eslint/template-parser@0.60.0':
+  '@html-eslint/parser@0.66.0':
     dependencies:
-      '@html-eslint/types': 0.60.0
+      '@html-eslint/template-syntax-parser': 0.66.0
+      '@html-eslint/types': 0.66.0
+      css-tree: 3.2.1
       es-html-parser: 0.3.1
 
-  '@html-eslint/template-syntax-parser@0.60.0':
+  '@html-eslint/template-parser@0.66.0':
     dependencies:
-      '@html-eslint/types': 0.60.0
+      '@html-eslint/types': 0.66.0
+      es-html-parser: 0.3.1
 
   '@html-eslint/template-syntax-parser@0.62.0':
     dependencies:
       '@html-eslint/types': 0.62.0
 
-  '@html-eslint/types@0.60.0':
+  '@html-eslint/template-syntax-parser@0.66.0':
+    dependencies:
+      '@html-eslint/types': 0.66.0
+
+  '@html-eslint/types@0.62.0':
     dependencies:
       '@types/css-tree': 2.3.11
       '@types/estree': 1.0.9
       es-html-parser: 0.3.1
 
-  '@html-eslint/types@0.62.0':
+  '@html-eslint/types@0.66.0':
     dependencies:
       '@types/css-tree': 2.3.11
       '@types/estree': 1.0.9
@@ -1429,7 +1429,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.63.3':
     optional: true
 
-  '@rviscomi/capo.js@2.1.0': {}
+  '@rviscomi/capo.js@2.3.0': {}
 
   '@standard-schema/spec@1.1.0': {}
 
@@ -1717,7 +1717,7 @@ snapshots:
   html-standard@0.0.13:
     dependencies:
       vscode-css-languageservice: 6.3.10
-      vscode-languageserver-textdocument: 1.0.12
+      vscode-languageserver-textdocument: 1.0.14
 
   ignore@5.3.2: {}
 
@@ -1958,15 +1958,15 @@ snapshots:
   vscode-css-languageservice@6.3.10:
     dependencies:
       '@vscode/l10n': 0.0.18
-      vscode-languageserver-textdocument: 1.0.12
+      vscode-languageserver-textdocument: 1.0.14
       vscode-languageserver-types: 3.17.5
-      vscode-uri: 3.1.0
+      vscode-uri: 3.2.0
 
-  vscode-languageserver-textdocument@1.0.12: {}
+  vscode-languageserver-textdocument@1.0.14: {}
 
   vscode-languageserver-types@3.17.5: {}
 
-  vscode-uri@3.1.0: {}
+  vscode-uri@3.2.0: {}
 
   which@2.0.2:
     dependencies:
