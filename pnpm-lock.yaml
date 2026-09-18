@@ -21,8 +21,8 @@ importers:
         specifier: ^0.66.0
         version: 0.66.0(eslint@10.10.0)
       '@html-eslint/parser':
-        specifier: ^0.62.0
-        version: 0.62.0
+        specifier: ^0.66.0
+        version: 0.66.0
       '@playwright/test':
         specifier: ^1.55.0
         version: 1.63.0
@@ -287,23 +287,14 @@ packages:
     peerDependencies:
       eslint: '>=8.0.0 || ^10.0.0-0'
 
-  '@html-eslint/parser@0.62.0':
-    resolution: {integrity: sha512-kb3uR4AX0hex211zAiiNeCZQVVKm0KbSTjWUKaLGPB9DtoL4y0A4ZJXa9DF2GOIFWDt42xJUUvffB2/MEj3ReA==}
-
   '@html-eslint/parser@0.66.0':
     resolution: {integrity: sha512-/KE6i8DIO1TAL0YvAgqaXWKduvlnnj1Sy2PXM3UKJZsk0798sLrKMKOl6sXH8QuNxXsPsW1hlxIHsho9UfZI1A==}
 
   '@html-eslint/template-parser@0.66.0':
     resolution: {integrity: sha512-eGo6mfWFahcVQE3+CGAK12QaYIURG8/xwb8ITw+5lrn0Mo1yUXFgdBODjx7E0Sd9sZ2FVw8JzMjMgxo4ntFdzA==}
 
-  '@html-eslint/template-syntax-parser@0.62.0':
-    resolution: {integrity: sha512-XPYul7JI6ld/a3vKOHmIWvCuNpOBc5YIiei5hHJQcCwLeIUyq3yGNUYyJSVF4k4QXe5ksyPfy0MRtOgA1tZ7Wg==}
-
   '@html-eslint/template-syntax-parser@0.66.0':
     resolution: {integrity: sha512-HLHSaH0e4udBFqE+GDexZnXBSyaB4Mo42UfYQo+/hyFXMnY8QBWaFFqsKL/vwWccX1hAaC5nKDdKldoVPDgugw==}
-
-  '@html-eslint/types@0.62.0':
-    resolution: {integrity: sha512-lG/Pp0m7OTWmB3PBdAtZNwp35dwjhXVY0jwSqP/47sNPRzVmAOVgxWq2tBQYyH6wJYp3aFZiv1wivd9lUAQZvw==}
 
   '@html-eslint/types@0.66.0':
     resolution: {integrity: sha512-QrUudu/EA47xIE0nN5Wf0LlMkz1vGB/rks/3D/+9KtlmUzpGOn562AShyz1fYE1OBFjjEk86pJmCkHhIm4WO7g==}
@@ -1300,13 +1291,6 @@ snapshots:
       eslint: 10.10.0
       html-standard: 0.0.13
 
-  '@html-eslint/parser@0.62.0':
-    dependencies:
-      '@html-eslint/template-syntax-parser': 0.62.0
-      '@html-eslint/types': 0.62.0
-      css-tree: 3.2.1
-      es-html-parser: 0.3.1
-
   '@html-eslint/parser@0.66.0':
     dependencies:
       '@html-eslint/template-syntax-parser': 0.66.0
@@ -1319,19 +1303,9 @@ snapshots:
       '@html-eslint/types': 0.66.0
       es-html-parser: 0.3.1
 
-  '@html-eslint/template-syntax-parser@0.62.0':
-    dependencies:
-      '@html-eslint/types': 0.62.0
-
   '@html-eslint/template-syntax-parser@0.66.0':
     dependencies:
       '@html-eslint/types': 0.66.0
-
-  '@html-eslint/types@0.62.0':
-    dependencies:
-      '@types/css-tree': 2.3.11
-      '@types/estree': 1.0.9
-      es-html-parser: 0.3.1
 
   '@html-eslint/types@0.66.0':
     dependencies:
